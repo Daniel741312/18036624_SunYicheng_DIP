@@ -9,8 +9,8 @@ cv::Mat& rgb2bin(cv::Mat &M1,uchar threhold) {
 
 	for (j = 0; j < height; j++) {
 		for (i = 0; i < weight; i++) {
-			uchar aver = M1.at<Vec3b>(j, i)[0] + M1.at<Vec3b>(j, i)[1] + M1.at<Vec3b>(j, i)[2] / 3;
-			/*��aver>��ֵȡ255,��aver<��ֵȡ0,ʵ�ֶ�ֵ��*/
+			uchar aver = (M1.at<Vec3b>(j, i)[0] + M1.at<Vec3b>(j, i)[1] + M1.at<Vec3b>(j, i)[2]) / 3;
+			/*当aver>阈值取255,当aver<阈值取0,实现二值化*/
 			aver = aver > threhold ? 255 : 0;
 			M1.at<Vec3b>(j, i)[0] = aver;
 			M1.at<Vec3b>(j, i)[1] = aver;
