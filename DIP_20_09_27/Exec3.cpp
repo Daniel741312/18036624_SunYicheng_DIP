@@ -3,10 +3,12 @@
 #include<opencv2/opencv.hpp>
 using namespace cv;
 
+/*绘图*/
 #if 0
 int main() {
 	int w = 500;
 	int h=500;
+	/*注意创建Mat时要初始化相关属性*/
 	Mat dispMat_circle=Mat(500,500,CV_8UC3,Scalar(0,0,255));
 	Mat dispMat_line=Mat(500,500,CV_8UC3,Scalar(0,0,255));
 	Mat dispMat_rectangle=Mat(500,500,CV_8UC3,Scalar(0,0,255));

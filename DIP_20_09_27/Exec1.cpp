@@ -3,6 +3,7 @@
 #include<opencv2/opencv.hpp>
 using namespace cv;
 
+/*分离三个通道*/
 #if 0
 int main() {
 	Mat src_color = imread("C:\\Users\\18798\\Desktop\\rgbDemo.png");
